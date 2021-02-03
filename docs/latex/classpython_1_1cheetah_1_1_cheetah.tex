@@ -1,0 +1,124 @@
+\hypertarget{classpython_1_1cheetah_1_1_cheetah}{}\doxysection{python.\+cheetah.\+Cheetah Class Reference}
+\label{classpython_1_1cheetah_1_1_cheetah}\index{python.cheetah.Cheetah@{python.cheetah.Cheetah}}
+
+
+Inheritance diagram for python.\+cheetah.\+Cheetah\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classpython_1_1cheetah_1_1_cheetah__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for python.\+cheetah.\+Cheetah\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classpython_1_1cheetah_1_1_cheetah__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpython_1_1cheetah_1_1_cheetah_1_1_c_cheetah}{C\+Cheetah}}
+\item 
+class \mbox{\hyperlink{classpython_1_1cheetah_1_1_cheetah_1_1_picovoice_statuses}{Picovoice\+Statuses}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpython_1_1cheetah_1_1_cheetah_ab097d17894bd42e49cbd6b26c9537779}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, library\+\_\+path, acoustic\+\_\+model\+\_\+path, language\+\_\+model\+\_\+path, license\+\_\+path, endpoint\+\_\+duration\+\_\+sec=None)
+\item 
+def \mbox{\hyperlink{classpython_1_1cheetah_1_1_cheetah_a54ef87145cebafdb899d22c67b03bffd}{sample\+\_\+rate}} (self)
+\item 
+def \mbox{\hyperlink{classpython_1_1cheetah_1_1_cheetah_a1fa8727e99884065f0b5420de65c6dac}{frame\+\_\+length}} (self)
+\item 
+def \mbox{\hyperlink{classpython_1_1cheetah_1_1_cheetah_a55388535e0990de7624bbd7f1ad7ed98}{process}} (self, pcm)
+\item 
+def \mbox{\hyperlink{classpython_1_1cheetah_1_1_cheetah_ad4327d95f86d23ac9e81c9561865b9bf}{flush}} (self)
+\item 
+def \mbox{\hyperlink{classpython_1_1cheetah_1_1_cheetah_aa8c69063f06adea240ae8ae83e97213b}{delete}} (self)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Python binding for Picovoice's streaming Speech-to-Text engine.\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpython_1_1cheetah_1_1_cheetah_ab097d17894bd42e49cbd6b26c9537779}\label{classpython_1_1cheetah_1_1_cheetah_ab097d17894bd42e49cbd6b26c9537779}} 
+\index{python.cheetah.Cheetah@{python.cheetah.Cheetah}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!python.cheetah.Cheetah@{python.cheetah.Cheetah}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def python.\+cheetah.\+Cheetah.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{library\+\_\+path,  }\item[{}]{acoustic\+\_\+model\+\_\+path,  }\item[{}]{language\+\_\+model\+\_\+path,  }\item[{}]{license\+\_\+path,  }\item[{}]{endpoint\+\_\+duration\+\_\+sec = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Loads Cheetah's dynamic library and creates an instance of speech-to-text object.
+
+:param library_path: Absolute path to Cheetah's dynamic library.
+:param acoustic_model_path: Absolute path to file containing acoustic model parameters.
+:param language_model_path: Absolute path to file containing language model parameters.
+:param license_path : Absolute path to license file.
+:param endpoint_duration_sec Duration of endpoint in seconds. A speech endpoint is detected when there is a
+chunk of audio (with a duration specified herein) after an utterance without any speech in it. Set to 'None'
+to disable endpoint detection.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpython_1_1cheetah_1_1_cheetah_aa8c69063f06adea240ae8ae83e97213b}\label{classpython_1_1cheetah_1_1_cheetah_aa8c69063f06adea240ae8ae83e97213b}} 
+\index{python.cheetah.Cheetah@{python.cheetah.Cheetah}!delete@{delete}}
+\index{delete@{delete}!python.cheetah.Cheetah@{python.cheetah.Cheetah}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily def python.\+cheetah.\+Cheetah.\+delete (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Releases resources acquired by Cheetah library.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpython_1_1cheetah_1_1_cheetah_ad4327d95f86d23ac9e81c9561865b9bf}\label{classpython_1_1cheetah_1_1_cheetah_ad4327d95f86d23ac9e81c9561865b9bf}} 
+\index{python.cheetah.Cheetah@{python.cheetah.Cheetah}!flush@{flush}}
+\index{flush@{flush}!python.cheetah.Cheetah@{python.cheetah.Cheetah}}
+\doxysubsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily def python.\+cheetah.\+Cheetah.\+flush (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Marks the end of the audio stream, flushes internal state of the object, and returns any remaining transcribed
+text.
+
+:return: final_transcript Any remaining transcribed text. If none is available then an empty string is returned.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpython_1_1cheetah_1_1_cheetah_a1fa8727e99884065f0b5420de65c6dac}\label{classpython_1_1cheetah_1_1_cheetah_a1fa8727e99884065f0b5420de65c6dac}} 
+\index{python.cheetah.Cheetah@{python.cheetah.Cheetah}!frame\_length@{frame\_length}}
+\index{frame\_length@{frame\_length}!python.cheetah.Cheetah@{python.cheetah.Cheetah}}
+\doxysubsubsection{\texorpdfstring{frame\_length()}{frame\_length()}}
+{\footnotesize\ttfamily def python.\+cheetah.\+Cheetah.\+frame\+\_\+length (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Number of audio samples per frame expected by C library.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpython_1_1cheetah_1_1_cheetah_a55388535e0990de7624bbd7f1ad7ed98}\label{classpython_1_1cheetah_1_1_cheetah_a55388535e0990de7624bbd7f1ad7ed98}} 
+\index{python.cheetah.Cheetah@{python.cheetah.Cheetah}!process@{process}}
+\index{process@{process}!python.cheetah.Cheetah@{python.cheetah.Cheetah}}
+\doxysubsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily def python.\+cheetah.\+Cheetah.\+process (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{pcm }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Processes a frame of audio and returns newly-transcribed text (if any) and a flag indicating if an endpoint has
+been detected. Upon detection of an endpoint, the client should invoke 'pv_cheetah_flush()' to retrieve any
+remaining transcription.
+
+:param pcm: A frame of audio samples. The number of samples per frame can be attained by calling '.frame_length'.
+The incoming audio needs to have a sample rate equal to '.sample_rate' and be 16-bit linearly-encoded.
+Furthermore, cheetah operates on single-channel audio.
+
+:return: tuple of Any newly-transcribed speech (if none is available then an empty string is returned) and a
+flag indicating if an endpoint has been detected.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpython_1_1cheetah_1_1_cheetah_a54ef87145cebafdb899d22c67b03bffd}\label{classpython_1_1cheetah_1_1_cheetah_a54ef87145cebafdb899d22c67b03bffd}} 
+\index{python.cheetah.Cheetah@{python.cheetah.Cheetah}!sample\_rate@{sample\_rate}}
+\index{sample\_rate@{sample\_rate}!python.cheetah.Cheetah@{python.cheetah.Cheetah}}
+\doxysubsubsection{\texorpdfstring{sample\_rate()}{sample\_rate()}}
+{\footnotesize\ttfamily def python.\+cheetah.\+Cheetah.\+sample\+\_\+rate (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Audio sample rate accepted by Cheetah library.\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+binding/python/cheetah.\+py\end{DoxyCompactItemize}
