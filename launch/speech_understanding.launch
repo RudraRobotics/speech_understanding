@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<launch>
+	<arg name="device" default=""/>
+	<arg name="bitrate" default="512"/>
+	<arg name="channels" default="1"/>
+	<arg name="sample_rate" default="16000"/>
+	<arg name="format" default="mp3"/>
+	<arg name="sample_format" default="S16LE"/>
+	<arg name="ns" default="audio"/>
+
+	<arg name="library_path" default="$(find speech_understanding)/data/lib/linux/x86_64/libpv_cheetah.so"/>
+	<arg name="acoustic_model_path" default="$(find speech_understanding)/data/lib/common/acoustic_model.pv"/>
+	<arg name="language_model_path" default="$(find speech_understanding)/data/lib/common/language_model.pv"/>
+	<arg name="license_path" default="$(find speech_understanding)/data/license_cta_v1.2.0_linux_expires_3_4_2021.lic"/>
+	
+    <node name="audio_capture" pkg="audio_capture" type="audio_capture" output="screen">
+      <param name="bitrate" value="$(arg bitrate)"/>
+      <param name="device" value="$(arg device)"/>
+      <param name="channels" value="$(arg channels)"/>
+      <param name="sample_rate" value="$(arg sample_rate)"/>
+      <param name="sample_format" value="$(arg sample_format)"/>
+      <param name="format" value="$(arg format)"/>
+    </node>
+
+    <node type="speech_understanding_node.py" name="speech_understanding" pkg="speech_understanding" output="screen">
+		<param name="library_path" value="$(arg library_path)"/>
+		<param name="acoustic_model_path" value="$(arg acoustic_model_path)"/>
+		<param name="language_model_path" value="$(arg language_model_path)"/>
+		<param name="license_path" value="$(arg license_path)"/>
+	</node>
+</launch>
