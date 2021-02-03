@@ -10,6 +10,7 @@ Features:
 6. Supports multiple plateform like embedded, desktop etc  
 7. Mission cancelation feature   
 8. Mission changing feature  
+9. wake up word detection for voice commanded system startup  
 
 Dependencies:  
 1. numpy  
