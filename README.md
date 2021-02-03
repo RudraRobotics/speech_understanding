@@ -19,3 +19,4 @@ How to run:
 1. roslaunch speech_understanding speech_understanding.launch  
 
 After this a user can speak and give multiple commands and talk with the robot, offline. 
+Online API documentation of this module:  https://rudrarobotics.github.io/speech_understanding/html/index.html
