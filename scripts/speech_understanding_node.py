@@ -17,6 +17,8 @@ class SpeechUnderstanding:
     self.language_model_path = rospy.get_param("/speech_understanding/language_model_path")
     self.license_path = rospy.get_param("/speech_understanding/license_path")
 
+    print('library_path=', self.library_path)
+
     self.cheetah = Cheetah(
         library_path=self.library_path,
         acoustic_model_path=self.acoustic_model_path,
@@ -30,12 +32,16 @@ class SpeechUnderstanding:
     try:
         numpydata = np.frombuffer(data.data, dtype=np.int16)
         audio_tuple_data = tuple(numpydata)
-        print(len(audio_tuple_data))
+        #print(len(audio_tuple_data))
         partial_transcript, is_endpoint = self.cheetah.process(audio_tuple_data)
+        print(partial_transcript, end='', flush=True)
         if is_endpoint:
             print(self.cheetah.flush())
     except Exception as e:
         pass #print(e)
+
+  def __del__(self):
+      self.cheetah.delete()
 
 if __name__ == '__main__':
   rospy.init_node('speech_understanding', anonymous=True)
