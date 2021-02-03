@@ -19,7 +19,7 @@ import numpy as np
 import pyaudio
 import soundfile
 
-sys.path.append(os.path.join(os.path.dirname(__file__), '../binding/python'))
+sys.path.append(os.path.join(os.path.dirname(__file__), 'binding/python'))
 
 from cheetah import Cheetah
 
@@ -117,17 +117,17 @@ if __name__ == '__main__':
     parser.add_argument(
         '--library_path',
         help="absolute path to Cheetah's dynamic library",
-        default=abs_path('lib/linux/x86_64/libpv_cheetah.so'))
+        default=abs_path('data/lib/linux/x86_64/libpv_cheetah.so'))
 
     parser.add_argument(
         '--acoustic_model_path',
         help='absolute path to acoustic model parameter file',
-        default=abs_path('lib/common/acoustic_model.pv'))
+        default=abs_path('data/lib/common/acoustic_model.pv'))
 
     parser.add_argument(
         '--language_model_path',
         help='absolute path to language model parameter file',
-        default=abs_path('lib/common/language_model.pv'))
+        default=abs_path('data/lib/common/language_model.pv'))
 
     parser.add_argument(
         '--license_path',

@@ -14,6 +14,8 @@ Features:
 Dependencies:  
 1. numpy  
 2. ROS noetic  
+3. portaudio19-dev 
+4. python3-pyaudio
 
 How to run:  
 1. roslaunch speech_understanding speech_understanding.launch  
