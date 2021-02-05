@@ -27,5 +27,5 @@
 		<param name="acoustic_model_path" value="$(arg acoustic_model_path)"/>
 		<param name="language_model_path" value="$(arg language_model_path)"/>
 		<param name="license_path" value="$(arg license_path)"/>
-	</node>
+    </node>
 </launch>

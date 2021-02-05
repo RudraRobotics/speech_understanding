@@ -28,14 +28,14 @@ class SpeechUnderstanding:
 
   def callback(self,data):
     try:
-        numpydata = np.frombuffer(data.data, dtype=np.int16)
-        audio_tuple_data = tuple(numpydata)
-        print(len(audio_tuple_data))
-        partial_transcript, is_endpoint = self.cheetah.process(audio_tuple_data)
+        pcm = data.data
+        #print('len:', len(pcm))
+        #print('type of tuple data and data:', type(pcm[0]), pcm[0])
+        partial_transcript, is_endpoint = self.cheetah.process(pcm)
         if is_endpoint:
             print(self.cheetah.flush())
     except Exception as e:
-        pass #print(e)
+        print(e)
 
 if __name__ == '__main__':
   rospy.init_node('speech_understanding', anonymous=True)
