@@ -15,6 +15,7 @@ Features:
 Dependencies:  
 1. numpy  
 2. ROS noetic  
+3. pyaudio_ros package https://github.com/RudraRobotics/pyaudio_ros  
 
 How to run:  
 1. roslaunch speech_understanding speech_understanding.launch  
